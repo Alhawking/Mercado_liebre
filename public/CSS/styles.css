@@ -336,6 +336,23 @@ nav a {
     opacity: 0;
 }
 
+.contraseña {
+    display: flex;
+    width: 100%;
+}
+
+.contraseña input {
+    border-right: none;
+}
+
+.contraseña button {
+    flex-grow: 0.3;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
 @media(min-width: 768px) {
     .menu-mobile {
         display: none !important;
