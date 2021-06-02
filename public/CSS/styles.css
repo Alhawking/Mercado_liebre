@@ -57,3 +57,339 @@ h3 {
 h4 {
     font-size: 2.6rem;
 }
+
+.section {
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 90%
+}
+
+
+/*Custom variables*/
+
+:root {
+    --yellow: #EAC926;
+    --blue: #03264C;
+    --green: #39b54a;
+    --gray: #666666;
+    --navyBlue: #1259c3;
+}
+
+
+/*header*/
+
+.header {
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.header-section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-section2 {
+    display: none;
+}
+
+.header-section1_logo {
+    height: 30%;
+    width: 30%;
+}
+
+.header-section1 div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-section1_input input {
+    border: 0;
+    padding: 1rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    margin-left: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.header-section1_input {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.header-section1_input i {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    align-self: stretch;
+    border-left: solid 1px #e1e1e1;
+}
+
+form {
+    margin: 0;
+    width: 100%;
+}
+
+.header-section1_input button {
+    align-self: stretch;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border: none;
+    padding: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+.header-section1 p {
+    text-align: center;
+    font-size: 90%;
+    margin: 0;
+    position: relative;
+}
+
+.money {
+    font-size: 2rem;
+}
+
+.menu-mobile {
+    background-color: var(--blue);
+    color: white;
+    align-self: center;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+nav a {
+    padding: 1rem;
+}
+
+
+/*main*/
+
+.main-product {
+    cursor: pointer;
+}
+
+.main-product_description {
+    border-top: solid 0.1rem #ebebeb;
+    padding: 1.5rem;
+}
+
+
+/* .main-product_description p:last-of-type {
+    display: none;
+}
+
+.main-product:hover>div p:last-of-type {
+    display: block;
+} */
+
+.deliver {
+    color: var(--green);
+    font-size: 3rem;
+}
+
+.main section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.percentage {
+    color: var(--green);
+}
+
+
+/*footer*/
+
+.footer-advantages {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-advantage {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.card {
+    text-align: center;
+    color: var(--navyBlue);
+    display: block;
+    align-self: center;
+    font-size: 5rem;
+}
+
+.footer-advantage_title {
+    font-weight: 700;
+}
+
+.footer-advantage_text {
+    font-weight: 400;
+}
+
+.footer-advantage_title,
+.footer-advantage_text {
+    margin: 0;
+    text-align: center;
+}
+
+.footer-copy {
+    text-align: center;
+    margin: 0;
+}
+
+
+/*Formulario*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.campo input {
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.campo input[type="radio"],
+.campo input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.tipo-usuario>div {
+    display: flex;
+    flex-direction: row;
+}
+
+.tipo-usuario>div>div,
+.intereses>div>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.intereses>div {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.campo input[type="file"] {
+    border: none;
+    cursor: pointer;
+}
+
+.form>button {
+    margin: 1rem 0;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+
+#file {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--yellow);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+#file:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#file p {
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#file input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+@media(min-width: 768px) {
+    .menu-mobile {
+        display: none !important;
+    }
+    .header-section2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-section1 {
+        flex-direction: row;
+    }
+    .header-section1 div {
+        flex-grow: 0.5;
+    }
+    .header-section1_input {
+        flex-grow: 1;
+    }
+    .main section {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+    }
+    .main-product {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .footer-advantages {
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+    .form {
+        align-items: center;
+    }
+    .campo {
+        width: 60%;
+    }
+    .intereses>div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .intereses>div>div input {
+        grid-column: 2/3;
+    }
+    .intereses>div>div label {
+        grid-row: 1/2;
+    }
+    .form>button {
+        width: 40%;
+        transition: 0.5s;
+    }
+    .form>button:hover {
+        background-color: #000;
+        color: white;
+        transform: scale(1.05, 1.05);
+    }
+}
