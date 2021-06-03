@@ -1,7 +1,6 @@
 const btnIngresar = document.querySelector('#ingresar');
 const btnVerPassword = document.querySelector('.contraseña button');
 const menuMobile = document.querySelector('.menu-mobile');
-console.log(menuMobile);
 menuMobile.onclick = () => {
     if (document.querySelector('.header-section2').classList.contains('menu-mobile-display')) {
         document.querySelector('.header-section2').classList.remove('menu-mobile-display');
