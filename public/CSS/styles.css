@@ -223,10 +223,6 @@ nav a:hover {
     flex-grow: 0.7;
 }
 
-.main-product_description p:last-of-type {
-    display: none;
-}
-
 .main-product:hover>div p:last-of-type {
     display: block;
 }
@@ -427,6 +423,9 @@ nav a:hover {
     }
     .main-product:hover i {
         transform: rotate(180deg);
+    }
+    .main-product_description p:last-of-type {
+        display: none;
     }
     .footer-advantages {
         flex-direction: row;
