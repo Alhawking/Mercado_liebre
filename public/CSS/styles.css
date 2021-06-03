@@ -97,27 +97,53 @@ h4 {
 }
 
 .header-section1_logo {
-    height: 30%;
-    width: 30%;
+    width: 40%;
 }
 
 .header-section1 div {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.header-section1_input input {
+    border: 0;
+    padding: 1rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    margin-left: 1rem;
+    width: 100%;
+    height: 100%;
 }
 
 .header-section1_input {
-    border: 0;
-    padding: 1rem;
-    border-radius: 0.3rem;
-    text-align: center;
-    margin: 0 1rem;
-    width: 50%
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
-.header-section1_input::placeholder {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+.header-section1_input i {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    align-self: stretch;
+    border-left: solid 1px #e1e1e1;
+}
+
+form {
+    margin: 0;
+    width: 100%;
+}
+
+.header-section1_input button {
+    align-self: stretch;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border: none;
+    padding: 0;
+    background-color: white;
+    cursor: pointer;
 }
 
 .header-section1 p {
@@ -144,6 +170,21 @@ nav a {
     padding: 1rem;
 }
 
+nav a:hover {
+    color: var(--green);
+}
+
+.menu-mobile-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-mobile-display nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /*main*/
 
@@ -154,6 +195,40 @@ nav a {
 .main-product_description {
     border-top: solid 0.1rem #ebebeb;
     padding: 1.5rem;
+    position: relative;
+}
+
+.main-product_description i {
+    border: solid 1px var(--green);
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2rem;
+    font-size: 2rem;
+    right: 2rem;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.main-product_description div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-product_description div p:last-of-type {
+    flex-grow: 0.7;
+}
+
+.main-product_description p:last-of-type {
+    display: none;
+}
+
+.main-product:hover>div p:last-of-type {
+    display: block;
 }
 
 .deliver {
@@ -168,6 +243,7 @@ nav a {
 
 .percentage {
     color: var(--green);
+    display: block !important;
 }
 
 
@@ -211,6 +287,118 @@ nav a {
     margin: 0;
 }
 
+.footer-advantage i:hover {
+    cursor: pointer;
+    color: var(--green);
+}
+
+
+/*Formulario*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.campo input {
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.campo input[type="radio"],
+.campo input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.tipo-usuario>div {
+    display: flex;
+    flex-direction: row;
+}
+
+.tipo-usuario>div>div,
+.intereses>div>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.intereses>div {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.campo input[type="file"] {
+    border: none;
+    cursor: pointer;
+}
+
+.form>button {
+    margin: 1rem 0;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+
+#file {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--yellow);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+#file:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#file p {
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#file input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.contraseña {
+    display: flex;
+    width: 100%;
+}
+
+.contraseña input {
+    border-right: none;
+}
+
+.contraseña button {
+    flex-grow: 0.3;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
 @media(min-width: 768px) {
     .menu-mobile {
         display: none !important;
@@ -234,11 +422,40 @@ nav a {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
     }
-    .main-product {
+    .main-product:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .main-product:hover i {
+        transform: rotate(180deg);
     }
     .footer-advantages {
         flex-direction: row;
         column-gap: 2rem;
+    }
+    .form {
+        align-items: center;
+    }
+    .campo {
+        width: 60%;
+    }
+    .intereses>div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .intereses>div>div input {
+        grid-column: 2/3;
+    }
+    .intereses>div>div label {
+        grid-row: 1/2;
+    }
+    .form>button {
+        width: 40%;
+        transition: 0.5s;
+    }
+    .form>button:hover {
+        background-color: #000;
+        color: white;
+        transform: scale(1.05, 1.05);
     }
 }

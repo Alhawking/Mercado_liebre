@@ -41,105 +41,89 @@
             </nav>
         </section>
     </header>
-    <div class="banner">
-        <img src="../public/img/img-home-banner.jpg" alt="Banner">
-    </div>
-    <main class="main section">
-        <h2>Basado en tu última visita</h2>
-        <section>
-            <div class="main-product">
-                <img src="/public/img/img-cafetera-moulinex.jpg" alt="Imagen cafetera">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
+    <h2>Registro</h2>
+    <section>
+        <form class="section form">
+            <div class="campo">
+                <label for="nombre">Nombre y apellido</label>
+                <input type="text" placeholder="Nombre y apellido" name="nombre">
+            </div>
+            <div class="campo">
+                <label for="nombreUsuario">Nombre de usuario</label>
+                <input type="text" placeholder="Nombre de usuario" name="nombreUsuario">
+            </div>
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" placeholder="E-mail" name="email">
+            </div>
+            <div class="campo">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" nombre="fechaNacimiento">
+            </div>
+            <div class="campo">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" placeholder="Domicilio" name="domicilio">
+            </div>
+            <div class="campo tipo-usuario">
+                <p>Tipo de ususario</p>
+                <div>
                     <div>
-                        <p>$6.770</p>
-                        <p class="percentage">30% OFF</p>
+                        <label for="tipo">Comprador</label>
+                        <input type="radio" value="Comprador" name="tipo">
                     </div>
-                    <p>Cafetera Moulinex</p>
+                    <div>
+                        <label for="tipo">Vendedor</label>
+                        <input type="radio" value="Vendedor" name="tipo">
+                    </div>
                 </div>
             </div>
-            <div class="main-product">
-                <img src="/public/img/img-macbook-pro-2019.jpg" alt="Imagen MacBook pro">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
+            <div class="campo intereses">
+                <p>Intereses</p>
+                <div>
                     <div>
-                        <p>$230.000</p>
-                        <p class="percentage">20% OFF</p>
+                        <input type="checkbox" name="electro">
+                        <label for="electro">Electro</label>
                     </div>
-                    <p>MacBook Pro 2019</p>
+                    <div>
+                        <input type="checkbox" placeholder="Moda" name="moda">
+                        <label for="moda">Moda</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="hogar">
+                        <label for="hogar">Hogar</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="jugueteria">
+                        <label for="jugueteria">Juguetería</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="VidaSana">
+                        <label for="VidaSana">Vida sana</label>
+                    </div>
                 </div>
             </div>
-            <div class="main-product">
-                <img src="/public/img/img-samsung-galaxy-s10.jpg" alt="Imagen samsung galaxy">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
-                    <div>
-                        <p>$70.500</p>
-                        <p class="percentage">10% OFF</p>
-                    </div>
-                    <p>Samsung Galaxy S10</p>
+            <div class="campo">
+                <label for="fotoPerfil">Foto de perfil</label>
+                <div id="file">
+                    <p>Seleccionar foto</p>
+                    <input type="file" name="fotoPerfil" accept=".webp, .jpg, .png">
                 </div>
             </div>
-            <div class="main-product">
-                <img src="/public/img/img-tv-samsung-smart.jpg" alt="Imagen Smart TV">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
-                    <div>
-                        <p>$23.200</p>
-                        <p class="percentage">5% OFF</p>
-                    </div>
-                    <p>SmartTv Samsung 43''</p>
+            <div class="campo">
+                <label for="contraseña">Contraseña</label>
+                <div class="contraseña">
+                    <input type="password" name="contraseña" placeholder="Contraseña">
+                    <button><i class="far fa-eye"></i></button>
                 </div>
             </div>
-        </section>
-        <h2>Sección de ofertas</h2>
-        <section>
-            <div class="main-product">
-                <img src="/public/img/img-cafetera-moulinex.jpg" alt="Imagen cafetera">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
-                    <div>
-                        <p>$6.770</p>
-                        <p class="percentage">30% OFF</p>
-                    </div>
-                    <p>Cafetera Moulinex</p>
-                </div>
+            <div class="campo">
+                <label for="contraseñaConfirmada">Confirmar contraseña</label>
+                <input type="password" name="contraseñaConfirmada" placeholder="Confirmar contraseña">
             </div>
-            <div class="main-product">
-                <img src="/public/img/img-macbook-pro-2019.jpg" alt="Imagen MacBook pro">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
-                    <div>
-                        <p>$230.000</p>
-                        <p class="percentage">20% OFF</p>
-                    </div>
-                    <p>MacBook Pro 2019</p>
-                </div>
-            </div>
-            <div class="main-product">
-                <img src="/public/img/img-samsung-galaxy-s10.jpg" alt="Imagen samsung galaxy">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
-                    <div>
-                        <p>$70.500</p>
-                        <p class="percentage">10% OFF</p>
-                    </div>
-                    <p>Samsung Galaxy S10</p>
-                </div>
-            </div>
-            <div class="main-product">
-                <img src="/public/img/img-tv-samsung-smart.jpg" alt="Imagen Smart TV">
-                <div class="main-product_description">
-                    <i class="fas fa-truck deliver"></i>
-                    <div>
-                        <p>$23.200</p>
-                        <p class="percentage">5% OFF</p>
-                    </div>
-                    <p>SmartTv Samsung 43''</p>
-                </div>
-            </div>
-        </section>
-    </main>
+            <button type="submit">Registrarme</button>
+            <button type="reset">Resetear</button>
+        </form>
+    </section>
     <footer class="footer section">
         <div class="footer-advantages">
             <div class="footer-advantage">
