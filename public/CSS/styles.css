@@ -1,3 +1,14 @@
+/*Custom variables*/
+
+:root {
+    --yellow: #EAC926;
+    --blue: #03264C;
+    --green: #39b54a;
+    --gray: #666666;
+    --navyBlue: #1259c3;
+}
+
+
 /* Globales */
 
 html {
@@ -15,6 +26,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 1.8;
+    background-color: #ebebeb;
 }
 
 p {
@@ -62,17 +74,6 @@ h4 {
     margin: 0 auto;
     max-width: 120rem;
     width: 90%
-}
-
-
-/*Custom variables*/
-
-:root {
-    --yellow: #EAC926;
-    --blue: #03264C;
-    --green: #39b54a;
-    --gray: #666666;
-    --navyBlue: #1259c3;
 }
 
 
@@ -190,6 +191,13 @@ nav a:hover {
 
 .main-product {
     cursor: pointer;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.main-product img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .main-product_description {
@@ -221,10 +229,6 @@ nav a:hover {
 
 .main-product_description div p:last-of-type {
     flex-grow: 0.7;
-}
-
-.main-product:hover>div p:last-of-type {
-    display: block;
 }
 
 .deliver {
@@ -418,14 +422,21 @@ nav a:hover {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
     }
+    .p-hidden {
+        height: 0;
+        margin: 0;
+        overflow: hidden;
+        transition: all 1s;
+    }
+    .main-product:hover .p-hidden {
+        visibility: visible;
+        height: 5rem;
+    }
     .main-product:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .main-product:hover i {
-        transform: rotate(180deg);
-    }
-    .main-product_description p:last-of-type {
-        display: none;
+        transform: rotate(360deg);
     }
     .footer-advantages {
         flex-direction: row;
