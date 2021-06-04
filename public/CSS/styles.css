@@ -428,6 +428,9 @@ nav a:hover {
         overflow: hidden;
         transition: all 1s;
     }
+    .main-product {
+        height: fit-content
+    }
     .main-product:hover .p-hidden {
         visibility: visible;
         height: 5rem;
