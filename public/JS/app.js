@@ -1,4 +1,5 @@
 const btnIngresar = document.querySelector('#ingresar');
+const btnRegistro = document.querySelector('#registro');
 const btnVerPassword = document.querySelector('.contraseña button');
 const menuMobile = document.querySelector('.menu-mobile');
 menuMobile.onclick = () => {
@@ -31,5 +32,11 @@ if (btnVerPassword) {
         <i class="far fa-eye-slash"></i>
         `
         }
+    }
+}
+if (btnRegistro) {
+    btnRegistro.onclick = e => {
+        e.preventDefault();
+        window.location.href = "/";
     }
 }
